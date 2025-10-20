@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+	<TITLE>My Secret Garden - FRONT GARDEN</TITLE>
+	<META name="generator" content="Adobe Photoshop(R) CS Web Photo Gallery">
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link href="images/galleryStyle.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+	<!--
+	
+	var feedback = new Object();
+	
+	function updateFeedback(picName) {
+		
+		if (feedback[picName]) {
+			
+			top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value = feedback[picName].comments;
+		
+			top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked = feedback[picName].approved;
+		
+			top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked = feedback[picName].other;
+			
+			top.TopFrame.document.images["saved"].src = "../images/saved.gif";
+		}
+	}
+	
+	function addComment(picName) {
+		feedback[picName] = new Object();
+		
+		feedback[picName].comments = top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value;
+		
+		feedback[picName].approved = top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked ? true : false;
+		
+		feedback[picName].other = top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked ? true : false;
+		
+		top.TopFrame.document.images["saved"].src = "../images/saved.gif";
+	}
+	
+	function removeFeedback(picName) {
+		//Make sure there is feedback to remove
+		if (!(top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value == ""
+			&& top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked == false
+			&& top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked == false)) {
+			if (confirm("Are you sure you want to remove feedback on this image?")) {
+				delete feedback[picName];
+				
+				top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value = "";
+			
+				top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked = false;
+			
+				top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked = false;
+				
+				top.TopFrame.document.images["saved"].src = "../images/spacer.gif";
+			}
+		}
+	}
+	
+	function sendFeedback(picName) {
+		checkForUnSavedChanges(picName);
+	
+		var prefix = "mailto:?";
+		var name = null;
+		name = prompt("Enter Your Name:", "Your Name");
+		
+		if (name) {
+			prefix += "subject=" + escape("Feedback from " + name);
+			prefix += "&body=";
+			var str = ""
+			
+			for (var i in feedback) {
+				
+				str += i + " ~~ \n";
+				str += (feedback[i].approved == true) ? "Approved ~~ \n" : "";
+				str += (feedback[i].other == true) ? "Other ~~ \n" : "";
+				str += (feedback[i].comments != "") ? ("\nComments:\n" + feedback[i].comments + " ~~ \n") : "";
+				str += "____________________________________________\n\n";
+			
+			}
+			
+			str = escape(str);
+			location.href = prefix + str;
+		}
+	}
+	
+	function setAsUnsaved() {
+		top.TopFrame.document.images["saved"].src = "../images/spacer.gif";
+	}
+	
+	function checkForUnSavedChanges(picName) {
+		
+		var unsavedChanges = false;
+		
+		if ((top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value != "" && !feedback[picName]) 
+			|| (feedback[picName] && feedback[picName].comments != top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value)) {
+			unsavedChanges = true;
+		} else if ((top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked != false && !feedback[picName]) 
+					|| (feedback[picName] && feedback[picName].approved != top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked)) {
+			unsavedChanges = true;
+		} else if ((top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked != false && !feedback[picName]) 
+					|| (feedback[picName] && feedback[picName].other != top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked)) {
+			unsavedChanges = true;
+		}		
+		
+		//Uncomment if auto-saving is not desired.
+		//if (confirm("There is unsaved feedback for this image. Would you like to save it?")) {
+			addComment(picName);
+		//}
+	}
+	//-->
+	</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #bcb5bc;
+}
+-->
+</style></HEAD>
+<body leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+	<div id="thumbnail" align="center">
+		<table height="82" border="0" cellpadding="4" cellspacing="0">
+			<tr align="center">				
+<td align="center">
+<a href="pages/IMG_0094.htm" target="TopFrame"><img src="thumbnails/IMG_0094.jpg" width="75" height="56" border=0 alt="IMG_0094"></a></td><td align="center">
+<a href="pages/IMG_0650_1.htm" target="TopFrame"><img src="thumbnails/IMG_0650_1.jpg" width="75" height="56" border=0 alt="IMG_0650_1"></a></td><td align="center">
+<a href="pages/IMG_0651.htm" target="TopFrame"><img src="thumbnails/IMG_0651.jpg" width="75" height="56" border=0 alt="IMG_0651"></a></td><td align="center">
+<a href="pages/IMG_0652.htm" target="TopFrame"><img src="thumbnails/IMG_0652.jpg" width="75" height="56" border=0 alt="IMG_0652"></a></td><td align="center">
+<a href="pages/IMG_0737.htm" target="TopFrame"><img src="thumbnails/IMG_0737.jpg" width="56" height="75" border=0 alt="IMG_0737"></a></td><td align="center">
+<a href="pages/IMG_0740.htm" target="TopFrame"><img src="thumbnails/IMG_0740.jpg" width="56" height="75" border=0 alt="IMG_0740"></a></td><td align="center">
+<a href="pages/IMG_0743.htm" target="TopFrame"><img src="thumbnails/IMG_0743.jpg" width="56" height="75" border=0 alt="IMG_0743"></a></td><td align="center">
+<a href="pages/IMG_2520.htm" target="TopFrame"><img src="thumbnails/IMG_2520.jpg" width="75" height="56" border=0 alt="IMG_2520"></a></td><td align="center">
+<a href="pages/IMG_2521.htm" target="TopFrame"><img src="thumbnails/IMG_2521.jpg" width="56" height="75" border=0 alt="IMG_2521"></a></td><td align="center">
+<a href="pages/IMG_2536.htm" target="TopFrame"><img src="thumbnails/IMG_2536.jpg" width="75" height="56" border=0 alt="IMG_2536"></a></td><td align="center">
+<a href="pages/IMG_2540.htm" target="TopFrame"><img src="thumbnails/IMG_2540.jpg" width="75" height="56" border=0 alt="IMG_2540"></a></td><td align="center">
+<a href="pages/IMG_2541.htm" target="TopFrame"><img src="thumbnails/IMG_2541.jpg" width="75" height="56" border=0 alt="IMG_2541"></a></td><td align="center">
+<a href="pages/IMG_2542.htm" target="TopFrame"><img src="thumbnails/IMG_2542.jpg" width="56" height="75" border=0 alt="IMG_2542"></a></td><td align="center">
+<a href="pages/IMG_2543.htm" target="TopFrame"><img src="thumbnails/IMG_2543.jpg" width="75" height="56" border=0 alt="IMG_2543"></a></td><td align="center">
+<a href="pages/IMG_2943.htm" target="TopFrame"><img src="thumbnails/IMG_2943.jpg" width="56" height="75" border=0 alt="IMG_2943"></a></td><td align="center">
+<a href="pages/IMG_8327.htm" target="TopFrame"><img src="thumbnails/IMG_8327.jpg" width="75" height="56" border=0 alt="IMG_8327"></a></td><td align="center">
+<a href="pages/IMG_8427.htm" target="TopFrame"><img src="thumbnails/IMG_8427.jpg" width="56" height="75" border=0 alt="IMG_8427"></a></td><td align="center">
+<a href="pages/KM%20Garden%20Secret%20Garden.htm" target="TopFrame"><img src="thumbnails/KM%20Garden%20Secret%20Garden.jpg" width="75" height="56" border=0 alt="KM Garden Secret Garden"></a></td><td align="center">
+<a href="pages/Picture%20079b.htm" target="TopFrame"><img src="thumbnails/Picture%20079b.jpg" width="75" height="56" border=0 alt="Picture 079b"></a></td><td align="center">
+<a href="pages/Picture%20081.htm" target="TopFrame"><img src="thumbnails/Picture%20081.jpg" width="75" height="56" border=0 alt="Picture 081"></a></td><td align="center">
+<a href="pages/mathews-R1-E023.htm" target="TopFrame"><img src="thumbnails/mathews-R1-E023.jpg" width="75" height="50" border=0 alt="mathews-R1-E023"></a></td>			</tr>
+		</table>
+	</div>
+</BODY>
+</HTML>

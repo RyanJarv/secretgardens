@@ -1,0 +1,136 @@
+<HTML>
+<HEAD>
+	<TITLE>My Secret Garden - BACK GARDEN</TITLE>
+	<META name="generator" content="Adobe Photoshop(R) CS Web Photo Gallery">
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link href="images/galleryStyle.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+	<!--
+	
+	var feedback = new Object();
+	
+	function updateFeedback(picName) {
+		
+		if (feedback[picName]) {
+			
+			top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value = feedback[picName].comments;
+		
+			top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked = feedback[picName].approved;
+		
+			top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked = feedback[picName].other;
+			
+			top.TopFrame.document.images["saved"].src = "../images/saved.gif";
+		}
+	}
+	
+	function addComment(picName) {
+		feedback[picName] = new Object();
+		
+		feedback[picName].comments = top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value;
+		
+		feedback[picName].approved = top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked ? true : false;
+		
+		feedback[picName].other = top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked ? true : false;
+		
+		top.TopFrame.document.images["saved"].src = "../images/saved.gif";
+	}
+	
+	function removeFeedback(picName) {
+		//Make sure there is feedback to remove
+		if (!(top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value == ""
+			&& top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked == false
+			&& top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked == false)) {
+			if (confirm("Are you sure you want to remove feedback on this image?")) {
+				delete feedback[picName];
+				
+				top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value = "";
+			
+				top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked = false;
+			
+				top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked = false;
+				
+				top.TopFrame.document.images["saved"].src = "../images/spacer.gif";
+			}
+		}
+	}
+	
+	function sendFeedback(picName) {
+		checkForUnSavedChanges(picName);
+	
+		var prefix = "mailto:?";
+		var name = null;
+		name = prompt("Enter Your Name:", "Your Name");
+		
+		if (name) {
+			prefix += "subject=" + escape("Feedback from " + name);
+			prefix += "&body=";
+			var str = ""
+			
+			for (var i in feedback) {
+				
+				str += i + " ~~ \n";
+				str += (feedback[i].approved == true) ? "Approved ~~ \n" : "";
+				str += (feedback[i].other == true) ? "Other ~~ \n" : "";
+				str += (feedback[i].comments != "") ? ("\nComments:\n" + feedback[i].comments + " ~~ \n") : "";
+				str += "____________________________________________\n\n";
+			
+			}
+			
+			str = escape(str);
+			location.href = prefix + str;
+		}
+	}
+	
+	function setAsUnsaved() {
+		top.TopFrame.document.images["saved"].src = "../images/spacer.gif";
+	}
+	
+	function checkForUnSavedChanges(picName) {
+		
+		var unsavedChanges = false;
+		
+		if ((top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value != "" && !feedback[picName]) 
+			|| (feedback[picName] && feedback[picName].comments != top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value)) {
+			unsavedChanges = true;
+		} else if ((top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked != false && !feedback[picName]) 
+					|| (feedback[picName] && feedback[picName].approved != top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked)) {
+			unsavedChanges = true;
+		} else if ((top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked != false && !feedback[picName]) 
+					|| (feedback[picName] && feedback[picName].other != top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked)) {
+			unsavedChanges = true;
+		}		
+		
+		//Uncomment if auto-saving is not desired.
+		//if (confirm("There is unsaved feedback for this image. Would you like to save it?")) {
+			addComment(picName);
+		//}
+	}
+	//-->
+	</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #bcb5bc;
+}
+-->
+</style></HEAD>
+<body leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+	<div id="thumbnail" align="center">
+		<table height="82" border="0" cellpadding="4" cellspacing="0">
+			<tr align="center">				
+<td align="center">
+<a href="pages/IMG_0008.htm" target="TopFrame"><img src="thumbnails/IMG_0008.jpg" width="75" height="56" border=0 alt="IMG_0008"></a></td><td align="center">
+<a href="pages/IMG_0013.htm" target="TopFrame"><img src="thumbnails/IMG_0013.jpg" width="56" height="75" border=0 alt="IMG_0013"></a></td><td align="center">
+<a href="pages/IMG_0122.htm" target="TopFrame"><img src="thumbnails/IMG_0122.jpg" width="75" height="56" border=0 alt="IMG_0122"></a></td><td align="center">
+<a href="pages/IMG_0763.htm" target="TopFrame"><img src="thumbnails/IMG_0763.jpg" width="56" height="75" border=0 alt="IMG_0763"></a></td><td align="center">
+<a href="pages/IMG_0769.htm" target="TopFrame"><img src="thumbnails/IMG_0769.jpg" width="75" height="56" border=0 alt="IMG_0769"></a></td><td align="center">
+<a href="pages/IMG_0892.htm" target="TopFrame"><img src="thumbnails/IMG_0892.jpg" width="56" height="75" border=0 alt="IMG_0892"></a></td><td align="center">
+<a href="pages/IMG_8320.htm" target="TopFrame"><img src="thumbnails/IMG_8320.jpg" width="56" height="75" border=0 alt="IMG_8320"></a></td><td align="center">
+<a href="pages/IMG_8322.htm" target="TopFrame"><img src="thumbnails/IMG_8322.jpg" width="56" height="75" border=0 alt="IMG_8322"></a></td><td align="center">
+<a href="pages/mathews-R1-E017.htm" target="TopFrame"><img src="thumbnails/mathews-R1-E017.jpg" width="50" height="75" border=0 alt="mathews-R1-E017"></a></td><td align="center">
+<a href="pages/mathews-R1-E021.htm" target="TopFrame"><img src="thumbnails/mathews-R1-E021.jpg" width="50" height="75" border=0 alt="mathews-R1-E021"></a></td><td align="center">
+<a href="pages/mathews-R1-E022.htm" target="TopFrame"><img src="thumbnails/mathews-R1-E022.jpg" width="75" height="50" border=0 alt="mathews-R1-E022"></a></td>			</tr>
+		</table>
+	</div>
+</BODY>
+</HTML>
