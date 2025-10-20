@@ -1,0 +1,207 @@
+<HTML>
+<HEAD>
+	<TITLE>My Secret Garden - GARDEN ART</TITLE>
+	<META name="generator" content="Adobe Photoshop(R) CS Web Photo Gallery">
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link href="images/galleryStyle.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+	<!--
+	
+	var feedback = new Object();
+	
+	function updateFeedback(picName) {
+		
+		if (feedback[picName]) {
+			
+			top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value = feedback[picName].comments;
+		
+			top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked = feedback[picName].approved;
+		
+			top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked = feedback[picName].other;
+			
+			top.TopFrame.document.images["saved"].src = "../images/saved.gif";
+		}
+	}
+	
+	function addComment(picName) {
+		feedback[picName] = new Object();
+		
+		feedback[picName].comments = top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value;
+		
+		feedback[picName].approved = top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked ? true : false;
+		
+		feedback[picName].other = top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked ? true : false;
+		
+		top.TopFrame.document.images["saved"].src = "../images/saved.gif";
+	}
+	
+	function removeFeedback(picName) {
+		//Make sure there is feedback to remove
+		if (!(top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value == ""
+			&& top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked == false
+			&& top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked == false)) {
+			if (confirm("Are you sure you want to remove feedback on this image?")) {
+				delete feedback[picName];
+				
+				top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value = "";
+			
+				top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked = false;
+			
+				top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked = false;
+				
+				top.TopFrame.document.images["saved"].src = "../images/spacer.gif";
+			}
+		}
+	}
+	
+	function sendFeedback(picName) {
+		checkForUnSavedChanges(picName);
+	
+		var prefix = "mailto:kmathewson@secretgardens.com?";
+		var name = null;
+		name = prompt("Enter Your Name:", "Your Name");
+		
+		if (name) {
+			prefix += "subject=" + escape("Feedback from " + name);
+			prefix += "&body=";
+			var str = ""
+			
+			for (var i in feedback) {
+				
+				str += i + " ~~ \n";
+				str += (feedback[i].approved == true) ? "Approved ~~ \n" : "";
+				str += (feedback[i].other == true) ? "Other ~~ \n" : "";
+				str += (feedback[i].comments != "") ? ("\nComments:\n" + feedback[i].comments + " ~~ \n") : "";
+				str += "____________________________________________\n\n";
+			
+			}
+			
+			str = escape(str);
+			location.href = prefix + str;
+		}
+	}
+	
+	function setAsUnsaved() {
+		top.TopFrame.document.images["saved"].src = "../images/spacer.gif";
+	}
+	
+	function checkForUnSavedChanges(picName) {
+		
+		var unsavedChanges = false;
+		
+		if ((top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value != "" && !feedback[picName]) 
+			|| (feedback[picName] && feedback[picName].comments != top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value)) {
+			unsavedChanges = true;
+		} else if ((top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked != false && !feedback[picName]) 
+					|| (feedback[picName] && feedback[picName].approved != top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked)) {
+			unsavedChanges = true;
+		} else if ((top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked != false && !feedback[picName]) 
+					|| (feedback[picName] && feedback[picName].other != top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked)) {
+			unsavedChanges = true;
+		}		
+		
+		//Uncomment if auto-saving is not desired.
+		//if (confirm("There is unsaved feedback for this image. Would you like to save it?")) {
+			addComment(picName);
+		//}
+	}
+	//-->
+	</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #bcb5bc;
+}
+-->
+</style></HEAD>
+<body leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+	<div id="thumbnail" align="center">
+		<table height="82" border="0" cellpadding="4" cellspacing="0">
+			<tr align="center">				
+<td align="center">
+<a href="pages/01.htm" target="TopFrame"><img src="thumbnails/01.jpg" width="75" height="56" border=0 alt="01"></a></td><td align="center">
+<a href="pages/02.htm" target="TopFrame"><img src="thumbnails/02.jpg" width="75" height="56" border=0 alt="02"></a></td><td align="center">
+<a href="pages/03.htm" target="TopFrame"><img src="thumbnails/03.jpg" width="75" height="56" border=0 alt="03"></a></td><td align="center">
+<a href="pages/04.htm" target="TopFrame"><img src="thumbnails/04.jpg" width="56" height="75" border=0 alt="04"></a></td><td align="center">
+<a href="pages/05.htm" target="TopFrame"><img src="thumbnails/05.jpg" width="75" height="56" border=0 alt="05"></a></td><td align="center">
+<a href="pages/06.htm" target="TopFrame"><img src="thumbnails/06.jpg" width="75" height="56" border=0 alt="06"></a></td><td align="center">
+<a href="pages/07.htm" target="TopFrame"><img src="thumbnails/07.jpg" width="75" height="56" border=0 alt="07"></a></td><td align="center">
+<a href="pages/08.htm" target="TopFrame"><img src="thumbnails/08.jpg" width="75" height="56" border=0 alt="08"></a></td><td align="center">
+<a href="pages/09.htm" target="TopFrame"><img src="thumbnails/09.jpg" width="75" height="56" border=0 alt="09"></a></td><td align="center">
+<a href="pages/10.htm" target="TopFrame"><img src="thumbnails/10.jpg" width="56" height="75" border=0 alt="10"></a></td><td align="center">
+<a href="pages/11.htm" target="TopFrame"><img src="thumbnails/11.jpg" width="56" height="75" border=0 alt="11"></a></td><td align="center">
+<a href="pages/12.htm" target="TopFrame"><img src="thumbnails/12.jpg" width="75" height="56" border=0 alt="12"></a></td><td align="center">
+<a href="pages/13.htm" target="TopFrame"><img src="thumbnails/13.jpg" width="75" height="56" border=0 alt="13"></a></td><td align="center">
+<a href="pages/14.htm" target="TopFrame"><img src="thumbnails/14.jpg" width="75" height="56" border=0 alt="14"></a></td><td align="center">
+<a href="pages/15.htm" target="TopFrame"><img src="thumbnails/15.jpg" width="56" height="75" border=0 alt="15"></a></td><td align="center">
+<a href="pages/16.htm" target="TopFrame"><img src="thumbnails/16.jpg" width="75" height="56" border=0 alt="16"></a></td><td align="center">
+<a href="pages/17.htm" target="TopFrame"><img src="thumbnails/17.jpg" width="56" height="75" border=0 alt="17"></a></td><td align="center">
+<a href="pages/18.htm" target="TopFrame"><img src="thumbnails/18.jpg" width="56" height="75" border=0 alt="18"></a></td><td align="center">
+<a href="pages/19.htm" target="TopFrame"><img src="thumbnails/19.jpg" width="75" height="56" border=0 alt="19"></a></td><td align="center">
+<a href="pages/20.htm" target="TopFrame"><img src="thumbnails/20.jpg" width="75" height="56" border=0 alt="20"></a></td><td align="center">
+<a href="pages/21.htm" target="TopFrame"><img src="thumbnails/21.jpg" width="75" height="56" border=0 alt="21"></a></td><td align="center">
+<a href="pages/22.htm" target="TopFrame"><img src="thumbnails/22.jpg" width="56" height="75" border=0 alt="22"></a></td><td align="center">
+<a href="pages/23.htm" target="TopFrame"><img src="thumbnails/23.jpg" width="56" height="75" border=0 alt="23"></a></td><td align="center">
+<a href="pages/24.htm" target="TopFrame"><img src="thumbnails/24.jpg" width="75" height="56" border=0 alt="24"></a></td><td align="center">
+<a href="pages/25.htm" target="TopFrame"><img src="thumbnails/25.jpg" width="56" height="75" border=0 alt="25"></a></td><td align="center">
+<a href="pages/26.htm" target="TopFrame"><img src="thumbnails/26.jpg" width="56" height="75" border=0 alt="26"></a></td><td align="center">
+<a href="pages/27.htm" target="TopFrame"><img src="thumbnails/27.jpg" width="56" height="75" border=0 alt="27"></a></td><td align="center">
+<a href="pages/28.htm" target="TopFrame"><img src="thumbnails/28.jpg" width="56" height="75" border=0 alt="28"></a></td><td align="center">
+<a href="pages/29.htm" target="TopFrame"><img src="thumbnails/29.jpg" width="56" height="75" border=0 alt="29"></a></td><td align="center">
+<a href="pages/30.htm" target="TopFrame"><img src="thumbnails/30.jpg" width="75" height="56" border=0 alt="30"></a></td><td align="center">
+<a href="pages/31.htm" target="TopFrame"><img src="thumbnails/31.jpg" width="56" height="75" border=0 alt="31"></a></td><td align="center">
+<a href="pages/32.htm" target="TopFrame"><img src="thumbnails/32.jpg" width="75" height="56" border=0 alt="32"></a></td><td align="center">
+<a href="pages/33.htm" target="TopFrame"><img src="thumbnails/33.jpg" width="56" height="75" border=0 alt="33"></a></td><td align="center">
+<a href="pages/34.htm" target="TopFrame"><img src="thumbnails/34.jpg" width="56" height="75" border=0 alt="34"></a></td><td align="center">
+<a href="pages/35.htm" target="TopFrame"><img src="thumbnails/35.jpg" width="56" height="75" border=0 alt="35"></a></td><td align="center">
+<a href="pages/36.htm" target="TopFrame"><img src="thumbnails/36.jpg" width="56" height="75" border=0 alt="36"></a></td><td align="center">
+<a href="pages/37.htm" target="TopFrame"><img src="thumbnails/37.jpg" width="75" height="56" border=0 alt="37"></a></td><td align="center">
+<a href="pages/38.htm" target="TopFrame"><img src="thumbnails/38.jpg" width="75" height="56" border=0 alt="38"></a></td><td align="center">
+<a href="pages/39.htm" target="TopFrame"><img src="thumbnails/39.jpg" width="56" height="75" border=0 alt="39"></a></td><td align="center">
+<a href="pages/40.htm" target="TopFrame"><img src="thumbnails/40.jpg" width="56" height="75" border=0 alt="40"></a></td><td align="center">
+<a href="pages/41.htm" target="TopFrame"><img src="thumbnails/41.jpg" width="56" height="75" border=0 alt="41"></a></td><td align="center">
+<a href="pages/42.htm" target="TopFrame"><img src="thumbnails/42.jpg" width="75" height="56" border=0 alt="42"></a></td><td align="center">
+<a href="pages/43.htm" target="TopFrame"><img src="thumbnails/43.jpg" width="56" height="75" border=0 alt="43"></a></td><td align="center">
+<a href="pages/44.htm" target="TopFrame"><img src="thumbnails/44.jpg" width="56" height="75" border=0 alt="44"></a></td><td align="center">
+<a href="pages/45.htm" target="TopFrame"><img src="thumbnails/45.jpg" width="75" height="56" border=0 alt="45"></a></td><td align="center">
+<a href="pages/46.htm" target="TopFrame"><img src="thumbnails/46.jpg" width="75" height="56" border=0 alt="46"></a></td><td align="center">
+<a href="pages/47.htm" target="TopFrame"><img src="thumbnails/47.jpg" width="75" height="56" border=0 alt="47"></a></td><td align="center">
+<a href="pages/48.htm" target="TopFrame"><img src="thumbnails/48.jpg" width="56" height="75" border=0 alt="48"></a></td><td align="center">
+<a href="pages/49.htm" target="TopFrame"><img src="thumbnails/49.jpg" width="56" height="75" border=0 alt="49"></a></td><td align="center">
+<a href="pages/50.htm" target="TopFrame"><img src="thumbnails/50.jpg" width="56" height="75" border=0 alt="50"></a></td><td align="center">
+<a href="pages/51.htm" target="TopFrame"><img src="thumbnails/51.jpg" width="75" height="56" border=0 alt="51"></a></td><td align="center">
+<a href="pages/52.htm" target="TopFrame"><img src="thumbnails/52.jpg" width="56" height="75" border=0 alt="52"></a></td><td align="center">
+<a href="pages/53.htm" target="TopFrame"><img src="thumbnails/53.jpg" width="56" height="75" border=0 alt="53"></a></td><td align="center">
+<a href="pages/54.htm" target="TopFrame"><img src="thumbnails/54.jpg" width="56" height="75" border=0 alt="54"></a></td><td align="center">
+<a href="pages/55.htm" target="TopFrame"><img src="thumbnails/55.jpg" width="56" height="75" border=0 alt="55"></a></td><td align="center">
+<a href="pages/56.htm" target="TopFrame"><img src="thumbnails/56.jpg" width="56" height="75" border=0 alt="56"></a></td><td align="center">
+<a href="pages/57.htm" target="TopFrame"><img src="thumbnails/57.jpg" width="56" height="75" border=0 alt="57"></a></td><td align="center">
+<a href="pages/58.htm" target="TopFrame"><img src="thumbnails/58.jpg" width="56" height="75" border=0 alt="58"></a></td><td align="center">
+<a href="pages/59.htm" target="TopFrame"><img src="thumbnails/59.jpg" width="56" height="75" border=0 alt="59"></a></td><td align="center">
+<a href="pages/60.htm" target="TopFrame"><img src="thumbnails/60.jpg" width="56" height="75" border=0 alt="60"></a></td><td align="center">
+<a href="pages/61.htm" target="TopFrame"><img src="thumbnails/61.jpg" width="56" height="75" border=0 alt="61"></a></td><td align="center">
+<a href="pages/62.htm" target="TopFrame"><img src="thumbnails/62.jpg" width="56" height="75" border=0 alt="62"></a></td><td align="center">
+<a href="pages/63.htm" target="TopFrame"><img src="thumbnails/63.jpg" width="56" height="75" border=0 alt="63"></a></td><td align="center">
+<a href="pages/64.htm" target="TopFrame"><img src="thumbnails/64.jpg" width="56" height="75" border=0 alt="64"></a></td><td align="center">
+<a href="pages/65.htm" target="TopFrame"><img src="thumbnails/65.jpg" width="56" height="75" border=0 alt="65"></a></td><td align="center">
+<a href="pages/66.htm" target="TopFrame"><img src="thumbnails/66.jpg" width="56" height="75" border=0 alt="66"></a></td><td align="center">
+<a href="pages/67.htm" target="TopFrame"><img src="thumbnails/67.jpg" width="56" height="75" border=0 alt="67"></a></td><td align="center">
+<a href="pages/68.htm" target="TopFrame"><img src="thumbnails/68.jpg" width="56" height="75" border=0 alt="68"></a></td><td align="center">
+<a href="pages/69.htm" target="TopFrame"><img src="thumbnails/69.jpg" width="56" height="75" border=0 alt="69"></a></td><td align="center">
+<a href="pages/70.htm" target="TopFrame"><img src="thumbnails/70.jpg" width="56" height="75" border=0 alt="70"></a></td><td align="center">
+<a href="pages/71.htm" target="TopFrame"><img src="thumbnails/71.jpg" width="56" height="75" border=0 alt="71"></a></td><td align="center">
+<a href="pages/72.htm" target="TopFrame"><img src="thumbnails/72.jpg" width="56" height="75" border=0 alt="72"></a></td><td align="center">
+<a href="pages/73.htm" target="TopFrame"><img src="thumbnails/73.jpg" width="75" height="56" border=0 alt="73"></a></td><td align="center">
+<a href="pages/74.htm" target="TopFrame"><img src="thumbnails/74.jpg" width="75" height="56" border=0 alt="74"></a></td><td align="center">
+<a href="pages/75.htm" target="TopFrame"><img src="thumbnails/75.jpg" width="75" height="56" border=0 alt="75"></a></td><td align="center">
+<a href="pages/76.htm" target="TopFrame"><img src="thumbnails/76.jpg" width="56" height="75" border=0 alt="76"></a></td><td align="center">
+<a href="pages/77.htm" target="TopFrame"><img src="thumbnails/77.jpg" width="75" height="56" border=0 alt="77"></a></td><td align="center">
+<a href="pages/78.htm" target="TopFrame"><img src="thumbnails/78.jpg" width="75" height="56" border=0 alt="78"></a></td><td align="center">
+<a href="pages/79.htm" target="TopFrame"><img src="thumbnails/79.jpg" width="75" height="56" border=0 alt="79"></a></td><td align="center">
+<a href="pages/80.htm" target="TopFrame"><img src="thumbnails/80.jpg" width="75" height="56" border=0 alt="80"></a></td><td align="center">
+<a href="pages/81.htm" target="TopFrame"><img src="thumbnails/81.jpg" width="56" height="75" border=0 alt="81"></a></td><td align="center">
+<a href="pages/82.htm" target="TopFrame"><img src="thumbnails/82.jpg" width="56" height="75" border=0 alt="82"></a></td>			</tr>
+		</table>
+	</div>
+</BODY>
+</HTML>

@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+	<TITLE>My Secret Garden - PLANTING DESIGN</TITLE>
+	<META name="generator" content="Adobe Photoshop(R) CS Web Photo Gallery">
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link href="images/galleryStyle.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+	<!--
+	
+	var feedback = new Object();
+	
+	function updateFeedback(picName) {
+		
+		if (feedback[picName]) {
+			
+			top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value = feedback[picName].comments;
+		
+			top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked = feedback[picName].approved;
+		
+			top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked = feedback[picName].other;
+			
+			top.TopFrame.document.images["saved"].src = "../images/saved.gif";
+		}
+	}
+	
+	function addComment(picName) {
+		feedback[picName] = new Object();
+		
+		feedback[picName].comments = top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value;
+		
+		feedback[picName].approved = top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked ? true : false;
+		
+		feedback[picName].other = top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked ? true : false;
+		
+		top.TopFrame.document.images["saved"].src = "../images/saved.gif";
+	}
+	
+	function removeFeedback(picName) {
+		//Make sure there is feedback to remove
+		if (!(top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value == ""
+			&& top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked == false
+			&& top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked == false)) {
+			if (confirm("Are you sure you want to remove feedback on this image?")) {
+				delete feedback[picName];
+				
+				top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value = "";
+			
+				top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked = false;
+			
+				top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked = false;
+				
+				top.TopFrame.document.images["saved"].src = "../images/spacer.gif";
+			}
+		}
+	}
+	
+	function sendFeedback(picName) {
+		checkForUnSavedChanges(picName);
+	
+		var prefix = "mailto:?";
+		var name = null;
+		name = prompt("Enter Your Name:", "Your Name");
+		
+		if (name) {
+			prefix += "subject=" + escape("Feedback from " + name);
+			prefix += "&body=";
+			var str = ""
+			
+			for (var i in feedback) {
+				
+				str += i + " ~~ \n";
+				str += (feedback[i].approved == true) ? "Approved ~~ \n" : "";
+				str += (feedback[i].other == true) ? "Other ~~ \n" : "";
+				str += (feedback[i].comments != "") ? ("\nComments:\n" + feedback[i].comments + " ~~ \n") : "";
+				str += "____________________________________________\n\n";
+			
+			}
+			
+			str = escape(str);
+			location.href = prefix + str;
+		}
+	}
+	
+	function setAsUnsaved() {
+		top.TopFrame.document.images["saved"].src = "../images/spacer.gif";
+	}
+	
+	function checkForUnSavedChanges(picName) {
+		
+		var unsavedChanges = false;
+		
+		if ((top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value != "" && !feedback[picName]) 
+			|| (feedback[picName] && feedback[picName].comments != top.TopFrame.document.forms["wpgFeedback"].elements["comments"].value)) {
+			unsavedChanges = true;
+		} else if ((top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked != false && !feedback[picName]) 
+					|| (feedback[picName] && feedback[picName].approved != top.TopFrame.document.forms["wpgFeedback"].elements["approved"].checked)) {
+			unsavedChanges = true;
+		} else if ((top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked != false && !feedback[picName]) 
+					|| (feedback[picName] && feedback[picName].other != top.TopFrame.document.forms["wpgFeedback"].elements["other"].checked)) {
+			unsavedChanges = true;
+		}		
+		
+		//Uncomment if auto-saving is not desired.
+		//if (confirm("There is unsaved feedback for this image. Would you like to save it?")) {
+			addComment(picName);
+		//}
+	}
+	//-->
+	</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #bcb5bc;
+}
+-->
+</style></HEAD>
+<body leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+	<div id="thumbnail" align="center">
+		<table height="82" border="0" cellpadding="4" cellspacing="0">
+			<tr align="center">				
+<td align="center">
+<a href="pages/IMG_0013.htm" target="TopFrame"><img src="thumbnails/IMG_0013.jpg" width="56" height="75" border=0 alt="IMG_0013"></a></td><td align="center">
+<a href="pages/IMG_0058.htm" target="TopFrame"><img src="thumbnails/IMG_0058.jpg" width="75" height="56" border=0 alt="IMG_0058"></a></td><td align="center">
+<a href="pages/IMG_0650.htm" target="TopFrame"><img src="thumbnails/IMG_0650.jpg" width="75" height="56" border=0 alt="IMG_0650"></a></td><td align="center">
+<a href="pages/IMG_0652_1.htm" target="TopFrame"><img src="thumbnails/IMG_0652_1.jpg" width="75" height="56" border=0 alt="IMG_0652_1"></a></td><td align="center">
+<a href="pages/IMG_0699.htm" target="TopFrame"><img src="thumbnails/IMG_0699.jpg" width="75" height="56" border=0 alt="IMG_0699"></a></td><td align="center">
+<a href="pages/IMG_0700.htm" target="TopFrame"><img src="thumbnails/IMG_0700.jpg" width="56" height="75" border=0 alt="IMG_0700"></a></td><td align="center">
+<a href="pages/IMG_0752.htm" target="TopFrame"><img src="thumbnails/IMG_0752.jpg" width="75" height="56" border=0 alt="IMG_0752"></a></td><td align="center">
+<a href="pages/IMG_0775.htm" target="TopFrame"><img src="thumbnails/IMG_0775.jpg" width="56" height="75" border=0 alt="IMG_0775"></a></td><td align="center">
+<a href="pages/IMG_0780.htm" target="TopFrame"><img src="thumbnails/IMG_0780.jpg" width="56" height="75" border=0 alt="IMG_0780"></a></td><td align="center">
+<a href="pages/IMG_0782.htm" target="TopFrame"><img src="thumbnails/IMG_0782.jpg" width="75" height="56" border=0 alt="IMG_0782"></a></td><td align="center">
+<a href="pages/IMG_0785.htm" target="TopFrame"><img src="thumbnails/IMG_0785.jpg" width="56" height="75" border=0 alt="IMG_0785"></a></td><td align="center">
+<a href="pages/IMG_0789.htm" target="TopFrame"><img src="thumbnails/IMG_0789.jpg" width="75" height="56" border=0 alt="IMG_0789"></a></td><td align="center">
+<a href="pages/IMG_0887.htm" target="TopFrame"><img src="thumbnails/IMG_0887.jpg" width="75" height="56" border=0 alt="IMG_0887"></a></td><td align="center">
+<a href="pages/IMG_0891.htm" target="TopFrame"><img src="thumbnails/IMG_0891.jpg" width="75" height="56" border=0 alt="IMG_0891"></a></td><td align="center">
+<a href="pages/IMG_2522.htm" target="TopFrame"><img src="thumbnails/IMG_2522.jpg" width="56" height="75" border=0 alt="IMG_2522"></a></td><td align="center">
+<a href="pages/IMG_2540.htm" target="TopFrame"><img src="thumbnails/IMG_2540.jpg" width="75" height="56" border=0 alt="IMG_2540"></a></td><td align="center">
+<a href="pages/IMG_2552.htm" target="TopFrame"><img src="thumbnails/IMG_2552.jpg" width="56" height="75" border=0 alt="IMG_2552"></a></td><td align="center">
+<a href="pages/IMG_2886.htm" target="TopFrame"><img src="thumbnails/IMG_2886.jpg" width="56" height="75" border=0 alt="IMG_2886"></a></td><td align="center">
+<a href="pages/IMG_2940.htm" target="TopFrame"><img src="thumbnails/IMG_2940.jpg" width="75" height="56" border=0 alt="IMG_2940"></a></td><td align="center">
+<a href="pages/IMG_2943.htm" target="TopFrame"><img src="thumbnails/IMG_2943.jpg" width="56" height="75" border=0 alt="IMG_2943"></a></td><td align="center">
+<a href="pages/KM%20Garden%20Bird%20Bath%20Fountain.htm" target="TopFrame"><img src="thumbnails/KM%20Garden%20Bird%20Bath%20Fountain.jpg" width="75" height="56" border=0 alt="KM Garden Bird Bath Fountain"></a></td><td align="center">
+<a href="pages/KM%20Garden%20Little%20Teaser%20Fountain.htm" target="TopFrame"><img src="thumbnails/KM%20Garden%20Little%20Teaser%20Fountain.jpg" width="75" height="56" border=0 alt="KM Garden Little Teaser Fountain"></a></td><td align="center">
+<a href="pages/KM%20Garden%20Secret%20Garden.htm" target="TopFrame"><img src="thumbnails/KM%20Garden%20Secret%20Garden.jpg" width="75" height="56" border=0 alt="KM Garden Secret Garden"></a></td><td align="center">
+<a href="pages/KM%20Garden%20Shade%20Texture.htm" target="TopFrame"><img src="thumbnails/KM%20Garden%20Shade%20Texture.jpg" width="56" height="75" border=0 alt="KM Garden Shade Texture"></a></td><td align="center">
+<a href="pages/Picture%20137.htm" target="TopFrame"><img src="thumbnails/Picture%20137.jpg" width="75" height="56" border=0 alt="Picture 137"></a></td><td align="center">
+<a href="pages/Picture%20145.htm" target="TopFrame"><img src="thumbnails/Picture%20145.jpg" width="75" height="56" border=0 alt="Picture 145"></a></td><td align="center">
+<a href="pages/Picture%20155.htm" target="TopFrame"><img src="thumbnails/Picture%20155.jpg" width="75" height="56" border=0 alt="Picture 155"></a></td><td align="center">
+<a href="pages/mathews-R1-E017.htm" target="TopFrame"><img src="thumbnails/mathews-R1-E017.jpg" width="50" height="75" border=0 alt="mathews-R1-E017"></a></td>			</tr>
+		</table>
+	</div>
+</BODY>
+</HTML>
