@@ -1,5 +1,7 @@
+.PHONY: update build
+
 build:
 	@docker build -t wayback-downloader .
 
-update: build clean
-	./scripts/fetch.sh
+update: build
+	./scripts/update.sh
